@@ -8,7 +8,7 @@ const stateContext = createContext({
     cart: [],
     setCart: () => { },
     clearCart: () => {},
-    imageServerPath: `http://localhost:8000/storage`
+    imageServerPath: `${import.meta.env.VITE_API_BASE_URL}/storage`
 });
 
 export const ContextProvider = ({ children }) => {

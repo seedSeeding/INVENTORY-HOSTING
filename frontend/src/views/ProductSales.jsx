@@ -60,7 +60,7 @@ export default function ProductSales() {
       productData.forEach((element) => {
         if (element.product_type === productType) {
           newWidth += 100;
-          imageMap[element.product_name] = "http://localhost:8000/storage/" + element.product_image;
+          imageMap[element.product_name] = `${import.meta.env.VITE_API_BASE_URL}/storage/` + element.product_image;
         }
       });
       setWidth(newWidth);
