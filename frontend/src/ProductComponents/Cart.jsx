@@ -59,7 +59,7 @@ export default function Cart() {
                                     <tbody>
                                         {cart.map((data) => (
                                             <tr key={data.id}>
-                                                <td className="image-row"><img src={`${import.meta.env.VITE_IMAGE_API_URL}/${data.product_image}`} alt="" /></td>
+                                                <td className="image-row"><img src={`${import.meta.env.VITE_STORAGE_BASE_URL}/${data.product_image}`} alt="" /></td>
                                                 <td>{ data.product_name}</td>
                                                 <td>{ data.product_price}</td>
                                                 <td>{ data.product_quantity }</td>

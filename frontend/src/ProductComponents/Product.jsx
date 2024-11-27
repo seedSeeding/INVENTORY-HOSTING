@@ -13,8 +13,10 @@ export default function Product({ product_image, product_name, id, product_quant
     };
     return (
         <div className="item" key={id}>
-            <img src={`${import.meta.env.VITE_IMAGE_API_URL}/${product_image}`} alt="item-img" className="item-img" />
+            
+            <img src={`${import.meta.env.VITE_STORAGE_BASE_URL}/${product_image}`} alt="item-img" className="item-img" />
             <div className="item-content">
+                <span>{`${import.meta.env.VITE_STORAGE_BASE_URL}/${product_image}`}</span>
                 <span className="item-text"><strong>Name: </strong>{product_name}</span>
                 <span className="item-text"><strong>Quantity: </strong>{product_quantity}</span>
                 <span className="item-text"><strong>Price: </strong>{product_price} Php</span>

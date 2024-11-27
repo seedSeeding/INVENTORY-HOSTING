@@ -147,6 +147,7 @@ export default function UpdateProductModal({ item, closeModal, setCloseModal }) 
                         <option value="HOUSEHOLD">HOUSEHOLD</option>
                         <option value="LUANDRY">LAUNDRY</option>
                         <option value="PERSONAL">PERSONAL</option>
+                        <option value="PERSONAL">FOOD</option>
                     </select>
 
                     <div className="edit-btn">

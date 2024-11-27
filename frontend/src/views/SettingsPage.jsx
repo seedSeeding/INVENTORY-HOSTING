@@ -31,7 +31,7 @@ export default function SettingsPage() {
 
     const formatDate = (date) => {
         date = String(new Date(date)).split(" ");
-        return `${date[1]} ${date[0]} ${date[4].slice(0,-3)} ${date[7] === "Daylight" ? "AM" : "PM"}`;
+        return `${date[1]} ${date[0]} ${date[4].slice(0,-3)} ${date[7] === "Daylight" ? "PM" : "AM"}`;
     };
 
     useEffect(() => { 
@@ -89,7 +89,9 @@ export default function SettingsPage() {
                     setToken(null);
 
                 }
+                
                 navigate("/login");
+                window.location.reload();
             } catch (error){
                 console.error('Error fetching products:', error);
                 alert('Failed to load products. Please try again.');
@@ -113,7 +115,7 @@ export default function SettingsPage() {
         <>
             <div className="container setting">
                 <div className="setting-profile">
-                    <img src="../../public/Image/user-logo.png" alt="" />
+                    <img src="/Image/user-logo.png" alt="" />
                     <span className="sett-prof-detail">
                         <span className="sett-prof-position">{user.position}</span><br />
                         <span className="sett-prof-email">{user.email}</span>

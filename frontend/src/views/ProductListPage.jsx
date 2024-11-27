@@ -81,7 +81,7 @@ export default function ProductListPage() {
                         <tr key={item.id}>
                             <td className="manage-table-d">
                                 <img 
-                                    src={`${import.meta.env.VITE_IMAGE_API_URL}/${item.product_image}`} 
+                                    src={`${import.meta.env.VITE_STORAGE_BASE_URL}/${item.product_image}`} 
                                     alt={item.product_name} 
                                 />
                             </td>

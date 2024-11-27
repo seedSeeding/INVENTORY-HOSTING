@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import BarGraph from "../ProductComponents/BarGraph";
-import apiService from "../components/Services/apiService";
 import CircleLoader from "../Loader/CircleLoader";
 import Loader from "../Loader/Loader";
 import axiosService from "./axios-client";
@@ -60,7 +59,7 @@ export default function ProductSales() {
       productData.forEach((element) => {
         if (element.product_type === productType) {
           newWidth += 100;
-          imageMap[element.product_name] = `${import.meta.env.VITE_API_BASE_URL}/storage/` + element.product_image;
+          imageMap[element.product_name] = `${import.meta.env.VITE_STORAGE_BASE_URL}/` + element.product_image;
         }
       });
       setWidth(newWidth);
