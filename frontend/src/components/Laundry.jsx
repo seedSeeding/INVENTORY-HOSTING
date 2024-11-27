@@ -34,7 +34,7 @@ export default function Laundry() {
   }, []);
 
   useEffect(() => {
-    const filtered = products.filter((data) => data.product_type === "LAUNDRY");
+    const filtered = products.filter((data) => data.product_type === "LUANDRY");
     setFilteredProducts(filtered);
     console.log("Filtered: ", products);
     if (filtered.length > 0) {
@@ -50,11 +50,17 @@ export default function Laundry() {
         <CircleLoader message="Fetching Products.." />
       ) : (
         <div className="item-sec">
+            {/* {leftProducts.map((item) => (
+
+              <img key={item.product_image} src={`${import.meta.env.VITE_STORAGE_BASE_URL}/${item.product_image}`} alt={`${import.meta.env.VITE_STORAGE_BASE_URL}/${item.product_image}`} />
+
+            ))} */}
           <div className="item-con">
+          
             {leftProducts.map((item) => (
               <Product
                 key={item.id}
-                product_image={item.product_image}
+                product_image={`${import.meta.env.VITE_STORAGE_BASE_URL}/${item.product_image}`}
                 product_name={item.product_name}
                 id={item.id}
                 product_quantity={item.product_quantity}
@@ -64,10 +70,11 @@ export default function Laundry() {
             ))}
           </div>
           <div className="item-con">
+          
             {rightProducts.map((item) => (
               <Product
                 key={item.id}
-                product_image={item.product_image}
+                product_image={`${import.meta.env.VITE_STORAGE_BASE_URL}/${item.product_image}`}
                 product_name={item.product_name}
                 id={item.id}
                 product_quantity={item.product_quantity}

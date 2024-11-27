@@ -48,4 +48,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::get("/users", [UserController::class, "index"]);
 });
 
+Route::get('/sales-rep' , [SaleController::class,'report']);
+
 
